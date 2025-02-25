@@ -1,0 +1,10 @@
+{
+    "fullName": "Full Name",
+    "email": "Email",
+    "mobile": "Mobile",
+    "message": "Message",
+    "send": "Send",
+    "forMoreInformation": "For more information",
+    "nearBranch": "Near Branch",
+    "fieldIsRequired": "This field is required"
+}
