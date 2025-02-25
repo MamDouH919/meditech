@@ -1,0 +1,56 @@
+{
+    "suppliers": [
+        {
+            "name": "SCW",
+            "type": "( Anesthesiology & Critical care )",
+            "description": "Used to establish a safe and convenient central venous access, to facilitate clinical first aid, intensive care and surgical process of medication",
+            "pdf": "/pdfs/Anesthesiology.pdf",
+            "logo": "/images/suppliers/scw.png",
+            "color": "#0084a5"
+        },
+        {
+            "name": "SCW",
+            "type": "( Urology )",
+            "description": "A comprehensive selection of advanced urology products, including catheters, drainage systems, urological instruments, and diagnostic tools designed for effective patient care and treatment.",
+            "pdf": "/pdfs/Urology.pdf",
+            "logo": "/images/suppliers/scw.png",
+            "color": "#0084a5"
+        },
+        {
+            "name": "SCW",
+            "type": "( Interventional )",
+            "description": "A specialized range of minimally invasive medical devices, including catheters, stents, and guidewires, designed for precise and effective interventional procedures.",
+            "pdf": "/pdfs/Interventional.pdf",
+            "logo": "/images/suppliers/scw.png",
+            "color": "#0084a5"
+        },
+        {
+            "name": "DIALL",
+            "description": "Zhengzhou DIALL Medical Technology Co,Ltd, set up in 2010, is a professional and comprehensive manufacture of high-tech, high precision polymeric medical devices.",
+            "pdf": "/pdfs/Diall.pdf",
+            "logo": "/images/suppliers/diall.png",
+            "color": "#eb8e32"
+        },
+        {
+            "name": "INVAMED",
+            "description": "INVAMED is not only a trusted medical device manufacturer but also proudly known as INVAMED Medical Innovation Institute, where ideas transform into life-saving medical devices.",
+            "pdf": "/pdfs/Invamed.pdf",
+            "logo": "/images/suppliers/invamed.png",
+            "color": "#003d62"
+        },
+        {
+            "name": "BASECHEK",
+            "description": "Acro Biotech is a California-based manufacturer of rapid tests offering the products from state -of-the-art IS013485:2016 ac- credited CMDCAS- compliant manufacturing facilities.",
+            "pdf": "/pdfs/Basechek.pdf",
+            "logo": "/images/suppliers/basechek.png",
+            "color": "#da0d2b"
+        },
+        {
+            "name": "FORNIA",
+            "description": "FORNIA Disposable Central Venous Catheter Kit is intended for short term use (<30 days) of vascular access. It is designed for central venous catheterization using the Seldinger technique.",
+            "pdf": "/pdfs/Fornia.pdf",
+            "logo": "/images/suppliers/fornia.png",
+            "color": "#003d7b"
+        }
+    ]
+}

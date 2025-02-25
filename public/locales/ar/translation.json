@@ -1,0 +1,10 @@
+{
+    "fullName": "الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "mobile": "رقم الموبايل",
+    "message": "رسالتك",
+    "send": "إرسال",
+    "forMoreInformation": "للمزيد من المعلومات",
+    "nearBranch": "المكان القريب",      
+    "fieldIsRequired": "هذا الحقل مطلوب"
+}
