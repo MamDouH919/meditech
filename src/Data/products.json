@@ -1,0 +1,17 @@
+[
+    {
+        "type": "urology",
+        "description": "",
+        "title": "Urology"
+    },
+    {
+        "type": "interventional",
+        "description": "",
+        "title": "Interventional & Cardiology"
+    },
+    {
+        "type": "anesthesiology",
+        "description": "",
+        "title": "Anesthesiology & Critical care"
+    }
+]

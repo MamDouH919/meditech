@@ -59,29 +59,7 @@ const Suppliers = () => {
                         <Close />
                     </IconButton>
                 </Stack>
-                {/* <object data={pdf} type="application/pdf" style={{ minHeight: "100vh", width: "100%" }}></object> */}
-                {/* <iframe
-                    src={pdf}
-                    width="100%"
-                    height="100%"
-                    title="PDF Viewer"
-                    style={{ width: '100%', minHeight: '500px', height: '100vh' }}
-                /> */}
                 <PDFViewer pdf={pdf} />
-                {/* <iframe
-                    src={pdf}
-                    width="100%"
-                    height="100%"
-                    title="PDF Viewer"
-                    style={{
-                        width: '100%',
-                        height: '100vh',
-                        minHeight: '500px',
-                        border: 'none',
-                        transform: 'scale(0.8)',  // Scale down on small screens
-                        transformOrigin: 'top left',
-                    }}
-                /> */}
             </DrawerStyle>
             <Container maxWidth="lg">
                 <SectionTitle

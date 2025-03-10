@@ -1,6 +1,6 @@
 import { SectionStyle } from '../../Styles'
 import SectionTitle from '../SectionTitle'
-import { Container, Grid2 as Grid, Stack, Typography } from '@mui/material'
+import { Container, Grid2 as Grid, Stack, Typography, useTheme } from '@mui/material'
 import Shape from '../Shape';
 import { FaRegLightbulb } from "react-icons/fa";
 import { GiTrophyCup } from "react-icons/gi";
@@ -8,6 +8,7 @@ import { FaEye } from "react-icons/fa";
 
 
 const About = () => {
+    const theme = useTheme()
     return (
         <SectionStyle id='about'>
             <SectionTitle
@@ -15,13 +16,13 @@ const About = () => {
             />
             <Container maxWidth={"lg"}>
                 <Stack alignItems={"center"}>
-                    <Typography  variant="body1" textAlign={"center"} fontSize={{md: 20, xs: 13}}>
+                    <Typography variant="body1" textAlign={"center"} fontSize={{ md: 18, xs: 13 }} color='text.secondary'>
                         Meditech Egypt - Dr. Sobhy Abou El-Kassem
-                        <br />
+
                         Founded in 2016, Meditech Egypt is a specialized company in the supply and distribution of medical equipment, focusing on cardiac catheterization, vascular products, and urology devices. The company employs 25 experienced professionals, ensuring the provision of globally certified products that meet the highest quality standards.
-                        <br />
+
                         Meditech Egypt collaborates with university hospitals, Ministry of Health hospitals, and private hospitals, including Qasr Al-Aini, Ain Shams University, Cairo University, Alexandria University, Health Insurance hospitals, and educational hospitals.
-                        <br />
+
                         Committed to delivering cutting-edge medical solutions, Meditech Egypt strives to build strong partnerships to support the healthcare sector and ensure exceptional medical care.
                     </Typography>
                 </Stack>
@@ -29,13 +30,13 @@ const About = () => {
                     <Grid container spacing={2}>
                         <Grid size={{ sm: 6, xs: 12 }}>
                             <Stack spacing={1} alignItems={"center"}>
-                                <Shape>
+                                <Shape bgcolor={theme.palette.error.main}>
                                     <GiTrophyCup />
                                 </Shape>
                                 <Typography variant="h6" fontWeight={"bold"} fontSize={20}>
                                     Our Mission
                                 </Typography>
-                                <Typography variant="body1" fontSize={15} textAlign={"center"} >
+                                <Typography variant="body1" fontSize={15} textAlign={"center"} color='text.secondary' px={5}>
                                     At Meditech Egypt, our mission is to enhance healthcare by providing high-quality, globally certified medical equipment.
                                     We are committed to delivering innovative solutions in cardiac catheterization,
                                     vascular products, and urology devices to improve patient outcomes.
@@ -47,13 +48,13 @@ const About = () => {
                         </Grid>
                         <Grid size={{ sm: 6, xs: 12 }}>
                             <Stack spacing={1} alignItems={"center"}>
-                                <Shape>
+                                <Shape bgcolor={theme.palette.info.main}>
                                     <FaRegLightbulb />
                                 </Shape>
                                 <Typography variant="h6" fontWeight={"bold"} fontSize={20}>
                                     Our Vision
                                 </Typography>
-                                <Typography variant="body1" fontSize={15} textAlign={"center"} >
+                                <Typography variant="body1" fontSize={15} textAlign={"center"} color='text.secondary' px={5}>
                                     Our vision is to become a leading medical equipment provider in Egypt and beyond,
                                     setting new standards in healthcare excellence. We aspire to expand our reach,
                                     continuously innovate, and contribute to the advancement of medical care by
@@ -63,7 +64,7 @@ const About = () => {
                         </Grid>
                         <Grid size={{ xs: 12 }}>
                             <Stack spacing={1} alignItems={"center"}>
-                                <Shape>
+                                <Shape bgcolor={theme.palette.success.main}>
                                     <FaEye />
                                 </Shape>
                                 <Typography variant="h6" fontWeight={"bold"} fontSize={20}>

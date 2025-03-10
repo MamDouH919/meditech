@@ -8,7 +8,7 @@ import ControlMUITextField from '../MUI/TextFieldControl';
 import { send } from 'emailjs-com';
 import { toast } from 'sonner';
 import { useState } from 'react';
-import { Email, Phone, StayCurrentPortrait } from '@mui/icons-material';
+import { Email, Phone, Place, StayCurrentPortrait } from '@mui/icons-material';
 
 const PREFIX = "Contact";
 
@@ -196,6 +196,17 @@ const Contact = () => {
                                     </Stack>
                                 </Stack>
                             </LinkStyle>
+                        </Grid>
+                        <Grid size={{ xs: 12 }}>
+                            <Stack component={Paper} px={2} py={1} direction={"row"} spacing={2}>
+                                <AvatarStyle>
+                                    <Place />
+                                </AvatarStyle>
+                                <Stack>
+                                    <Typography color='primary'>Address</Typography>
+                                    <Typography color='text.secondary'>355 Ramsis Street, Abbassia, Cairo, Egypt</Typography>
+                                </Stack>
+                            </Stack>
                         </Grid>
                     </Grid>
                 </Container>

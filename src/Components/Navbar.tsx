@@ -258,7 +258,7 @@ function Navbar() {
             <Container maxWidth="xl">
                 <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
                     <Stack mx={2}>
-                        <img src={LOGO} alt='logo' height={90} srcSet={LOGO} />
+                        <img src={LOGO} alt='logo' height={50} srcSet={LOGO} />
                     </Stack>
                     <Stack direction={"row"} spacing={1} useFlexGap alignItems={"center"}>
                         <Stack direction={"row"} alignItems={"center"} spacing={1} useFlexGap>

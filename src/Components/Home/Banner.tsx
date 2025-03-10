@@ -3,10 +3,10 @@ import BG from '../../assets/banner.webp';
 import { useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import Tab from '@mui/material/Tab';
-import { Paper, Stack, Tabs } from "@mui/material";
-import ur1 from "../../assets/banner/urology1.avif"
-import ur2 from "../../assets/banner/urology2.jpeg"
-import ur3 from "../../assets/banner/urology3.jpg"
+import { Button, Paper, Stack, Tabs } from "@mui/material";
+import ur1 from "../../assets/banner/urology1.png"
+import ur2 from "../../assets/banner/urology2.png"
+import ur3 from "../../assets/banner/urology3.png"
 import interventional1 from "../../assets/banner/interventional1.png"
 import interventional2 from "../../assets/banner/interventional2.png"
 import interventional3 from "../../assets/banner/interventional3.png"
@@ -14,6 +14,7 @@ import anesthesiology1 from "../../assets/banner/anesthesiology1.png"
 import anesthesiology2 from "../../assets/banner/anesthesiology2.png"
 import anesthesiology3 from "../../assets/banner/anesthesiology3.png"
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -115,14 +116,13 @@ const Banner = () => {
                     </Tabs>
                 </Box>
                 <CustomTabPanel value={value} index={0}>
-                    <AnimatedImageStack images={[ur1, ur2, ur3]} alt="urology" />
-                    {/* <Button>Download</Button> */}
+                    <AnimatedImageStack images={[ur1, ur2, ur3]} alt="urology" type={"urology"} />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={1}>
-                    <AnimatedImageStack images={[interventional1, interventional2, interventional3]} alt="interventional" />
+                    <AnimatedImageStack images={[interventional1, interventional2, interventional3]} alt="interventional" type={"interventional"} />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={2}>
-                    <AnimatedImageStack images={[anesthesiology1, anesthesiology2, anesthesiology3]} alt="anesthesiology" />
+                    <AnimatedImageStack images={[anesthesiology1, anesthesiology2, anesthesiology3]} alt="anesthesiology" type="anesthesiology" />
                 </CustomTabPanel>
             </Stack>
         </Root>
@@ -136,19 +136,26 @@ const ImageStyle = styled("img")(() => ({
 }));
 
 
-const AnimatedImageStack = ({ images, alt }: { images: string[], alt: string }) => {
+const AnimatedImageStack = ({ images, alt, type }: { images: string[], alt: string, type?: string }) => {
     return (
-        <Stack direction="row" gap={2} justifyContent="center" flexWrap={"wrap"}>
-            {images.map((src, index) => (
-                <motion.div
-                    key={src}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.3, duration: 0.5 }} // Staggered effect
-                >
-                    <ImageStack src={src} alt={alt} />
-                </motion.div>
-            ))}
+        <Stack spacing={2} alignItems={"center"}>
+            <Stack direction="row" gap={2} justifyContent="center" flexWrap={"wrap"}>
+                {images.map((src, index) => (
+                    <motion.div
+                        key={src}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: index * 0.3, duration: 0.5 }} // Staggered effect
+                    >
+                        <ImageStack src={src} alt={alt} />
+                    </motion.div>
+                ))}
+            </Stack>
+            {type && <Link to={`/products/${type}`}>
+                <Button variant="contained">
+                    View all products
+                </Button>
+            </Link>}
         </Stack>
     );
 };

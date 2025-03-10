@@ -29,7 +29,7 @@ function withRoot(Component: any) {
         const theme = createTheme({
             direction: dir,
             shape: {
-                borderRadius: 10,
+                borderRadius: 20,
             },
             components: {
                 // MuiCssBaseline: {
