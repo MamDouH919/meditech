@@ -1,6 +1,5 @@
 import { Stack, Typography } from '@mui/material';
 import { styled } from "@mui/material/styles";
-import LOGO from '../assets/logo.webp';
 
 const PREFIX = "Footer";
 const classes = {
@@ -51,10 +50,10 @@ const Footer = () => {
     return (
         <Root alignItems={"center"} spacing={2}>
             <img
-                src={LOGO}
-                alt="logo"
-                height={80}
-                srcSet={LOGO}
+                src={"/logo.webp"}
+                alt="meditech egypt logo"
+                height={120}
+                srcSet={"/logo.webp"}
             />
             <Typography variant="h5">
 

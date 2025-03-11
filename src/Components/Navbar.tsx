@@ -15,7 +15,6 @@ import { Menu as MenuIcon } from '@mui/icons-material';
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import LOGO from '../assets/logo.webp';
 
 const links = [
     {
@@ -258,7 +257,12 @@ function Navbar() {
             <Container maxWidth="xl">
                 <Toolbar disableGutters sx={{ justifyContent: "space-between" }}>
                     <Stack mx={2}>
-                        <img src={LOGO} alt='logo' height={50} srcSet={LOGO} />
+                        <img
+                            src={"/logo.webp"}
+                            alt="meditech egypt logo"
+                            srcSet={"/logo.webp"}
+                            height={80}
+                        />
                     </Stack>
                     <Stack direction={"row"} spacing={1} useFlexGap alignItems={"center"}>
                         <Stack direction={"row"} alignItems={"center"} spacing={1} useFlexGap>

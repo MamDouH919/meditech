@@ -1,11 +1,19 @@
 import { SectionStyle } from '../../Styles'
 import SectionTitle from '../SectionTitle'
-import { Container, Grid2 as Grid, Stack, Typography, useTheme } from '@mui/material'
+import { Container, Grid2 as Grid, List, ListItem, ListItemIcon, ListItemText, Stack, Typography, useTheme } from '@mui/material'
 import Shape from '../Shape';
 import { FaRegLightbulb } from "react-icons/fa";
 import { GiTrophyCup } from "react-icons/gi";
 import { FaEye } from "react-icons/fa";
+import { styled } from '@mui/material/styles'
+import { Remove } from '@mui/icons-material';
 
+const ListItemStyle = styled(ListItem)(({ theme }) => ({
+    padding: theme.spacing(0),
+    "& .MuiListItemIcon-root": {
+        minWidth: "30px",
+    },
+}))
 
 const About = () => {
     const theme = useTheme()
@@ -72,13 +80,40 @@ const About = () => {
                                 </Typography>
 
                                 <Stack fontSize={15}>
-                                    <ul>
-                                        <li>Quality & Excellence – We are dedicated to supplying only the highest quality medical equipment that meets international standards.</li>
-                                        <li>Innovation – We embrace the latest advancements in medical technology to bring cutting-edge solutions to the healthcare sector.</li>
-                                        <li>Integrity & Trust – We operate with transparency, honesty, and ethical business practices in all our partnerships.</li>
-                                        <li>Commitment to Healthcare – We strive to improve patient care by supporting healthcare professionals with reliable and effective medical products.</li>
-                                        <li>Collaboration – We build strong relationships with hospitals, healthcare providers, and industry leaders to foster a healthier future.</li>
-                                    </ul>
+                                    <List>
+                                        <ListItemStyle>
+                                            <ListItemIcon>
+                                                <Remove />
+                                            </ListItemIcon>
+                                            <ListItemText
+                                                primary="Quality & Excellence - We are dedicated to supplying only the highest quality medical equipment that meets international standards."
+                                            />
+                                        </ListItemStyle>
+                                        <ListItemStyle>
+                                            <ListItemIcon>
+                                                <Remove />
+                                            </ListItemIcon>
+                                            <ListItemText primary="Innovation - We embrace the latest advancements in medical technology to bring cutting-edge solutions to the healthcare sector." />
+                                        </ListItemStyle>
+                                        <ListItemStyle>
+                                            <ListItemIcon>
+                                                <Remove />
+                                            </ListItemIcon>
+                                            <ListItemText primary="Integrity & Trust - We operate with transparency, honesty, and ethical business practices in all our partnerships." />
+                                        </ListItemStyle>
+                                        <ListItemStyle>
+                                            <ListItemIcon>
+                                                <Remove />
+                                            </ListItemIcon>
+                                            <ListItemText primary="Commitment to Healthcare - We strive to improve patient care by supporting healthcare professionals with reliable and effective medical products." />
+                                        </ListItemStyle>
+                                        <ListItemStyle>
+                                            <ListItemIcon>
+                                                <Remove />
+                                            </ListItemIcon>
+                                            <ListItemText primary="Collaboration - We build strong relationships with hospitals, healthcare providers, and industry leaders to foster a healthier future." />
+                                        </ListItemStyle>
+                                    </List>
                                 </Stack>
 
                             </Stack>

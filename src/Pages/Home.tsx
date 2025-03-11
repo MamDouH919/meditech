@@ -4,6 +4,7 @@ import Suppliers from '../Components/Home/Suppliers';
 import Contact from '../Components/Home/Contact';
 import Gallery from '../Components/Home/Gallery';
 import Clients from '../Components/Home/Clients';
+import Leader from '../Components/Home/Leader';
 
 const Home = () => {
 
@@ -11,6 +12,7 @@ const Home = () => {
         <>
             <Banner />
             <About />
+            <Leader />
             <Suppliers />
             <Contact />
             <Gallery />
