@@ -94,6 +94,7 @@ const Leader = () => {
                         </Stack>
                     </Grid>
                     <Grid
+                        mt={{ xs: 4, md: 0 }}
                         size={{ xs: 12, md: 6 }}
                         display={"flex"}
                         justifyContent={{ md: "flex-end", xs: "center" }}

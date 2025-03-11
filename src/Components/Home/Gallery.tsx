@@ -6,30 +6,6 @@ import { Box, Container, Paper } from '@mui/material'
 import { Stack } from '@mui/material'
 import { styled } from '@mui/material/styles';
 
-import gallery1 from "../../assets/gallery/gallery1.jpeg"
-import gallery2 from "../../assets/gallery/gallery2.jpeg"
-import gallery3 from "../../assets/gallery/gallery3.jpeg"
-import gallery4 from "../../assets/gallery/gallery4.jpeg"
-import gallery5 from "../../assets/gallery/gallery5.jpeg"
-import gallery6 from "../../assets/gallery/gallery6.jpeg"
-import gallery8 from "../../assets/gallery/gallery8.jpeg"
-import gallery9 from "../../assets/gallery/gallery9.jpeg"
-import gallery10 from "../../assets/gallery/gallery10.jpeg"
-import gallery11 from "../../assets/gallery/gallery11.jpeg"
-import gallery12 from "../../assets/gallery/gallery12.jpeg"
-import gallery13 from "../../assets/gallery/gallery13.jpeg"
-import gallery14 from "../../assets/gallery/gallery14.jpeg"
-import gallery15 from "../../assets/gallery/gallery15.jpeg"
-import gallery16 from "../../assets/gallery/gallery16.jpeg"
-import gallery17 from "../../assets/gallery/gallery17.jpeg"
-import gallery18 from "../../assets/gallery/gallery18.jpeg"
-import gallery19 from "../../assets/gallery/gallery19.jpeg"
-import gallery20 from "../../assets/gallery/gallery20.jpeg"
-import gallery21 from "../../assets/gallery/gallery21.jpeg"
-import gallery22 from "../../assets/gallery/gallery22.jpeg"
-import gallery23 from "../../assets/gallery/gallery23.jpeg"
-import gallery24 from "../../assets/gallery/gallery24.jpeg"
-
 const BoxStyle = styled(Box)(({ theme }) => ({
     display: "grid",
     gridAutoFlow: "column", /* Forces items to be laid out in a single row */
@@ -45,11 +21,14 @@ const BoxStyle = styled(Box)(({ theme }) => ({
     justifyContent: "start",
 }))
 
-const images = [
-    gallery1, gallery2, gallery3, gallery4, gallery5, gallery6,
-    gallery8, gallery9, gallery10, gallery11, gallery12, gallery13, gallery14, gallery15,
-    gallery16, gallery17, gallery18, gallery19, gallery20, gallery21, gallery22, gallery23, gallery24
-];
+// const imagesData = import.meta.glob('/src/assets/gallery/*.{jpg,png,jpeg}', { eager: true });
+// const images = Object.values(imagesData);
+
+const imagesData = import.meta.glob('/src/assets/gallery/*.{jpg,png,jpeg}', { eager: true });
+const images = Object.values(imagesData).map((image) => (image as { default: string }).default);
+
+
+
 
 const Gallery = () => {
     const gridRef = useRef<HTMLDivElement | null>(null); // Explicitly type the ref
@@ -113,7 +92,7 @@ const Gallery = () => {
                         onMouseLeave={handleMouseLeave}
                     >
                         {images.concat(images).map((image, index) => (
-                            <ImageStack key={index} src={image} alt={"gallery"} />
+                            <ImageStack key={index} src={image} alt={`meditech egypt gallery ${index}`} />
                         ))}
                     </BoxStyle>
                 </Stack>
